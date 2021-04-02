@@ -14,10 +14,23 @@
     /usr/lib/x86_64-linux-gnu/libdtk-5.2.2/DGui/bin/deepin-gui-settings --set "DTK/WindowRadius" -i 5
     ```
 
+## 标题栏宽度调窄
+
+    ```
+    vim ~/.local/share/deepin/themes/deepin/light/titlebar.ini
+    vim ~/.local/share/deepin/themes/deepin/dark/titlebar.ini
+
+    [Active]
+    height=24
+
+    [Inactive]
+    height=24
+    ```
+
 ## 多任务界面去掉桌面
 
 ```
-vim .config/kwin/kwinrc
+vim .config/kwinrc
 
 [TabBox]
 ShowDesktopMode=0
@@ -34,6 +47,12 @@ gsettings set com.deepin.dde.daemon bluetooth false
 ## Deepin Terminal
 
 将切换标签（Tab）的快捷键换成`Alt + [1-9]`。
+
+## Flatpak Mirror
+
+```
+sudo flatpak remote-modify flathub --url=https://mirror.sjtu.edu.cn/flathub
+```
 
 ## 安装新内核
 
