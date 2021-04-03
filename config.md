@@ -54,6 +54,13 @@ gsettings set com.deepin.dde.daemon bluetooth false
 sudo flatpak remote-modify flathub --url=https://mirror.sjtu.edu.cn/flathub
 ```
 
+## 修改启动关机界面
+
+```
+plymouth-set-default-theme -l
+plymouth-set-default-theme deepin-hidpi-ssd-logo -R
+```
+
 ## 安装新内核
 
 ```
