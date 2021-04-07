@@ -61,6 +61,14 @@ plymouth-set-default-theme -l
 plymouth-set-default-theme deepin-hidpi-ssd-logo -R
 ```
 
+## 双系统时 Windows 慢8小时
+
+在 Debian 系的系统里执行如下命令。
+
+```
+timedatectl set-local-rtc 1
+```
+
 ## 安装新内核
 
 ```
