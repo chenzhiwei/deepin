@@ -51,8 +51,14 @@ gsettings set com.deepin.dde.daemon bluetooth false
 ## Flatpak Mirror
 
 ```
-sudo flatpak remote-modify flathub --url=https://mirror.sjtu.edu.cn/flathub
+sudo apt -y install flatpak
+sudo flatpak remote-modify --no-follow-redirect --url=https://mirror.sjtu.edu.cn/flathub flathub
+
+flatpak install com.github.unrud.VideoDownloader org.gtk.Gtk3theme.deepin org.gtk.Gtk3theme.deepin-dark \
+    org.mozilla.firefox org.supertuxproject.SuperTux org.telegram.desktop us.zoom.Zoom
 ```
+
+`--no-follow-redirect` 表示将此 URL 持久化下来，否则这个 URL 会在更新后被重置回默认值。
 
 ## 修改启动关机界面
 
