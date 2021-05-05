@@ -21,10 +21,10 @@
     vim ~/.local/share/deepin/themes/deepin/dark/titlebar.ini
 
     [Active]
-    height=24
+    height=40
 
     [Inactive]
-    height=24
+    height=40
     ```
 
 ## 多任务界面去掉桌面
@@ -52,7 +52,12 @@ gsettings set com.deepin.dde.daemon bluetooth false
 
 ```
 sudo apt -y install flatpak
+
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
 sudo flatpak remote-modify --no-follow-redirect --url=https://mirror.sjtu.edu.cn/flathub flathub
+
+# restart system
 
 flatpak install com.github.unrud.VideoDownloader org.gtk.Gtk3theme.deepin org.gtk.Gtk3theme.deepin-dark \
     org.mozilla.firefox org.supertuxproject.SuperTux org.telegram.desktop us.zoom.Zoom
