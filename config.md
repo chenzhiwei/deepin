@@ -63,7 +63,7 @@ flatpak install com.github.unrud.VideoDownloader org.gtk.Gtk3theme.deepin org.gt
     org.mozilla.firefox org.supertuxproject.SuperTux org.telegram.desktop us.zoom.Zoom
 ```
 
-`--no-follow-redirect` 表示将此 URL 持久化下来，否则这个 URL 会在更新后被重置回默认值。
+`--no-follow-redirect` 表示将此 URL 持久化下来，否则这个 URL 会在更新后被重置回默认值。低版本没有这个参数，需要手动添加`url-is-set=true`到文件`/var/lib/flatpak/repo/config`。
 
 ## 修改启动关机界面
 
